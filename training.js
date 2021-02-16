@@ -37,3 +37,40 @@ function highAndLow(numbers){
     //return true or false
     return /^(\d{4}|\d{6})$/.test(pin)
   }
+
+  function FizzBuzz () {
+      for (var i = 1; i <= 101; i++){
+          if (i%15 === 0) {
+              console.log("FizzBUzz")
+          } else if ( i%5 === 0) {
+              console.log("Fizz")
+          } else if (i%3 === 0) {
+              console.log("Buzz")
+          } else {
+              console.log(i)
+          }
+      }
+  }
+
+
+//   Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+
+function pigIt(str){
+    //Code here
+    return str.split(' ').map(i => i.match(/[A-z]/i) ? i.slice(1) + i.charAt(0) + "ay" : i).join(' ')
+  }
+
+  function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+
+// Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed 
+// (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. 
+// Spaces will be included only when more than one word is present.
+
+function spinWords(str){
+    //TODO Have fun :)
+    return str.split(' ').map(i => i.length >= 5 ? i.split("").reverse().join('') : i).join(' ')
+    
+  }
+  
