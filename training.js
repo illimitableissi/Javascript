@@ -20,3 +20,20 @@ function persistence(num) {
        return a.match(/\d/) - b.match(/\d/);
      }).join(' ');
    }
+
+// In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+function highAndLow(numbers){
+    var newArray =  numbers.split(' ').map(Number)
+    return [Math.max(...newArray), Math.min(...newArray)].join(' ')
+  
+  }
+
+
+//   ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+//   If the function is passed a valid PIN string, return true, else return false.
+
+  function validatePIN (pin) {
+    //return true or false
+    return /^(\d{4}|\d{6})$/.test(pin)
+  }
