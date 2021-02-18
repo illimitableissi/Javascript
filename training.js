@@ -74,3 +74,13 @@ function spinWords(str){
     
   }
   
+//   for (var i = 0; i < 3; i++) {
+//     setTimeout(function() { alert(i); }, 1000 + i);
+//   }
+
+function isPangram(string){
+    //...
+      var alphabets = 'abcdefghijklmnopqrstuvwxyz'.split("");
+      var string = string.toLowerCase();
+      return alphabets.every(x => string.includes(x));
+  }
