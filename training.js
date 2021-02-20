@@ -74,9 +74,7 @@ function spinWords(str){
     
   }
   
-//   for (var i = 0; i < 3; i++) {
-//     setTimeout(function() { alert(i); }, 1000 + i);
-//   }
+//   A pangram is a sentence that contains every single letter of the alphabet at least once.
 
 function isPangram(string){
     //...
@@ -84,3 +82,27 @@ function isPangram(string){
       var string = string.toLowerCase();
       return alphabets.every(x => string.includes(x));
   }
+
+function longestConsec(strarr, k) {
+  if( strarr.length==0 || k> strarr.length || k <1 ) return "";
+  let lens = strarr.map( (_,i,arr) => arr.slice(i,i+k).join('').length ),
+      i = lens.indexOf( Math.max(...lens) );
+  return strarr.slice(i,i+k).join('')
+}
+
+// Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
+
+function solution(number){
+    let sum = 0
+        if (number <= 0) {
+          return 0 
+      }
+    for(var i = 1; i < number; i++) {
+      if (i%3 === 0 || i%5 === 0 ) {
+        sum += i 
+      }
+    }
+    return sum 
+  }
+
+  //stuff
