@@ -125,3 +125,53 @@ function solution(number){
      }
    
    }
+
+
+
+//    Given two arrays a and b write a function comp(a, b) (orcompSame(a, b)) that checks whether the two arrays have the "same" elements, 
+//    with the same multiplicities. 
+//    "Same" means, here, that the elements in b are the elements in a squared, regardless of the order.
+
+   function comp(array1, array2){
+    //your code here
+    
+   if (!array1 || !array2 || array1.length !== array2.length) {
+     return false
+   }
+    
+    var sortedArrOne = array1.sort((a, b) => a - b )
+    var sortedArrTwo = array2.sort((a, b) => a - b )
+    return sortedArrOne.map(i => Math.pow(i, 2)).toString() == sortedArrTwo.toString() ? true : false
+    
+  }
+
+//   This kata is designed to test your ability to extend the functionality of built-in classes. 
+//   In this case, we want you to extend the built-in Array class with the following methods: square(), cube(), average(), sum(), even() and odd().
+
+  Array.prototype.square = function() {
+    return this.map(i => i*i)
+  }
+  
+  Array.prototype.cube = function() {
+    return this.map(i => i*i*i)
+  }
+  
+  Array.prototype.sum = function(){
+    return this.reduce((a, b) => a + b)
+  }
+  
+  Array.prototype.average = function(){
+    if (this.join('') === '') {
+      return NaN
+    } else {
+    return this.reduce((a,b) => a+b)/this.length
+  }
+    }
+  
+  Array.prototype.even = function(){
+    return this.filter(i => i%2 === 0)
+  }
+  
+  Array.prototype.odd = function(){
+    return this.filter(i => i%2 !==0)
+  }
