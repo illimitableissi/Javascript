@@ -175,8 +175,3 @@ function solution(number){
   Array.prototype.odd = function(){
     return this.filter(i => i%2 !==0)
   }
-function dog(a,b,c) {
-    return a+b
-}
-
-dog(1,2)
