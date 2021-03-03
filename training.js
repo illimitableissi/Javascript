@@ -180,3 +180,47 @@ function solution(number){
   function filter_list(l) {
     return l.filter(i=> typeof i !== 'string');
   }
+
+  function XO(str) {
+    //code here
+  var lowStr =  str.toLowerCase()
+  const x = lowStr.split('').filter(i => i == 'x');
+  const o = lowStr.split('').filter(j => j == 'o');
+  
+  if (!x || !o) {
+    return true
+  } else if (x.length == o.length) {
+    return true
+  } else {
+    return false
+  }
+}
+
+var summation = function (num) {
+  // Code here
+  let array = [...Array(num+1).keys()]
+    return array.reduce((a,b) => a + b )
+}
+
+function stringTransformer(str) {
+  // Your code here
+  return str.split('').map(i => i == i.toLowerCase() ? i.toUpperCase() : i.toLowerCase()).join('').split(' ').reverse().join(' ')
+}
+
+function sumTwoSmallestNumbers(numbers) {  
+  //Code here
+  let firstMin = Math.min(...numbers)
+  let arr2 = numbers.sort((a,b) => a-b).slice(1)
+  let secondMin = Math.min(...arr2)
+                                 
+  return firstMin + secondMin
+}
+
+function makeNegative(num) {
+  // Code?
+  if(num = -Math.abs(num)){
+    return num
+  } else {
+  return num * -1
+    }
+}
