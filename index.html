@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="pokemon">
+        <h1 class="pokemon_name">Pokemon name</h1>
+            <p class="pokemon_abilities">pokemon abilities</p>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$.ajax({
+    url: "https://pokeapi.co/api/v2/pokemon/ditto",
+    method: "GET"
+  }).then(function(response) {
+    console.log(response)
+ 
+  $('.pokemon_name').text(response.name)
+  $('.pokemon_abilities').text(response.abilities[1].ability)
+
+});
+
+</script>
+</html>
