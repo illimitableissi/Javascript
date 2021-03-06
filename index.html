@@ -22,7 +22,10 @@ $.ajax({
     console.log(response)
  
   $('.pokemon_name').text(response.name)
-  $('.pokemon_abilities').text(response.abilities[1].ability)
+  $('.pokemon_abilities').text(response.abilities[0].ability.name)
+  var p = $('<p>')
+    p.text(response.abilities[1].ability.name)
+    $('.pokemon_abilities').append(p)
 
 });
 

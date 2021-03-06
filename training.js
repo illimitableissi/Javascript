@@ -228,3 +228,39 @@ function makeNegative(num) {
 function isDivisible(n, x, y) {
   return n%x == 0 && n%y == 0 ? true : false
 }
+
+const binaryArrayToNumber = arr => {
+  // your code
+  return parseInt(arr.join(''),2)
+};
+
+var iterations = 0;
+
+function palindrome (num) {
+  if (num.toString() === num.toString().split('').reverse().join('')) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function reverseAdd (num) {
+  var reverseNum = Number(num.toString().split('').reverse().join(''))
+  var solution = num + reverseNum;
+  return solution;
+}
+
+function check(n) {
+  var num = reverseAdd(n);
+  var isPalindrome = palindrome(num)
+  if (isPalindrome = true) {
+    console.log(`${iterations} ${num}`)
+  } else {
+    while (isPalindrome = false) {
+      iterations++;
+      num += reverseAdd(num);
+    }
+    console.log(`${iterations} ${num}`)
+  }
+}
+check(295)
