@@ -244,23 +244,26 @@ function palindrome (num) {
   }
 }
 
-function reverseAdd (num) {
+function reverse (num) {
   var reverseNum = Number(num.toString().split('').reverse().join(''))
-  var solution = num + reverseNum;
-  return solution;
+  return reverseNum;
 }
 
-function check(n) {
-  var num = reverseAdd(n);
-  var isPalindrome = palindrome(num)
-  if (isPalindrome = true) {
-    console.log(`${iterations} ${num}`)
-  } else {
-    while (isPalindrome = false) {
-      iterations++;
-      num += reverseAdd(num);
+function check(num) {
+  let reverseNum = 0;
+  while (num <= 4294967295) {
+    reverseNum = reverse(num);
+    num = num + reverseNum;
+    iterations++
+    if (palindrome(num)) {
+      console.log(`${iterations} ${num}`);
+      break;
+    } else {
+      if(num > 4294967295){
+        console.log('No palindrome exists')
+      }
     }
-    console.log(`${iterations} ${num}`)
   }
 }
-check(295)
+
+check(265)
