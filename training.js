@@ -266,4 +266,16 @@ function check(num) {
   }
 }
 
-check(265)
+function bmi(weight, height) {
+  const bmiCal = weight/(Math.pow(height,2));
+  
+  if (bmiCal <= 18.5){
+    return "Underweight"
+  } else if (bmiCal <= 25){
+    return 'Normal'
+  } else if (bmiCal <= 30){
+    return 'Overweight'
+  } else {
+    return 'Obese'
+  }
+}
