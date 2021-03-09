@@ -279,3 +279,15 @@ function bmi(weight, height) {
     return 'Obese'
   }
 }
+
+function descendingOrder(n){
+  //...
+  let stuff = n.toString().split('').map(i => Number(i)).sort((a,b) => b-a).map(i => i.toString()).join('')
+  return Number(stuff)
+}
+
+function squareDigits(num){
+  //may the code be with you
+  return Number(String(num).split('').map(i => Number(i)*Number(i)).join(''))
+   
+}
