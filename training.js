@@ -291,20 +291,3 @@ function squareDigits(num){
   return Number(String(num).split('').map(i => Number(i)*Number(i)).join(''))
    
 }
-
-
-function meanderingArray (arr) {
-  let newArray = 0;
-  for(var i = 0; i<arr.length; i++){
-
-  }
-
-  for (var j = 0; j=arr.length; j--){
-  
-  }
-
-}
-
-
-
-meanderingArray([10, 15, -2, -9, 6, 7, 28])

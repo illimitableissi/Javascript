@@ -10,3 +10,16 @@ function findUniq(arr) {
       return sorted[0]
     } 
   }
+
+  function noSpace(x){
+    return String(x.split('').map(i => i.trim()).join(''))
+}
+
+function digital_root(n) {
+  
+  function splitAdd (num) {
+    return num
+  }
+  // ...
+  splitAdd(n)
+}
