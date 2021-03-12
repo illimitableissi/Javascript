@@ -23,3 +23,7 @@ function digital_root(n) {
   // ...
   splitAdd(n)
 }
+
+function repeatStr (n, s) {
+  return s.repeat(n);
+}
