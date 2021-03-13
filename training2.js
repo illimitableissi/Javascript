@@ -27,3 +27,24 @@ function digital_root(n) {
 function repeatStr (n, s) {
   return s.repeat(n);
 }
+
+function find_average(array) {
+  // your code here
+  return array.reduce((a,b) => a + b)/array.length;
+}
+
+//return the total number of smiling faces in the array
+function countSmileys(arr) {
+
+  let valid = [':)', ':D', ';-D', ':~)', ';~D'];
+  let smilies = 0;
+  
+  for (var i = 0; i < arr.length; i++){
+    for (var j = 0; j < valid.length; j++){
+      if (arr[i] === valid[j]) {
+      smilies++
+      }
+    }
+  }
+  return smilies
+}
