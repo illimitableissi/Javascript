@@ -58,3 +58,13 @@ function solution(str, ending){
 
   // return str.endsWith(ending);
 }
+
+// Create a function named divisors/Divisors that takes an integer n > 1 and returns an array with all of the integer's divisors(except for 1 and the number itself), 
+// from smallest to largest. If the number is prime return the string '(integer) is prime'
+
+function divisors(integer) {
+  
+  let array = [...Array(integer).keys()].filter(i => integer % i === 0).filter(j => j !=1)
+  return array.length > 0 ? array : `${integer} is prime`
+  
+};
