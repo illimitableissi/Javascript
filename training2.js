@@ -75,3 +75,10 @@ function getAverage(marks){
   return Math.floor(marks.reduce((a,b) => a + b)/marks.length)
           
  }
+
+//  Convert number to reversed array of digits
+ function digitize(n) {
+  //code here
+  let array = String(n).split('').reverse()
+  return array.map(i => Number(i))
+}
