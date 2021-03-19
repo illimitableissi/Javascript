@@ -82,3 +82,18 @@ function getAverage(marks){
   let array = String(n).split('').reverse()
   return array.map(i => Number(i))
 }
+
+//convert to celsius
+
+function weatherInfo (temp) {
+  var c = convertToCelsius(temp)
+  if (c <= 0)
+    return (c + " is freezing temperature")
+  else
+    return (c + " is above freezing temperature")
+}
+
+function convertToCelsius (temperature) {
+  var celsius = (temperature - 32) * (5/9)
+  return celsius
+}
