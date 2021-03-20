@@ -98,6 +98,7 @@ function convertToCelsius (temperature) {
   return celsius
 }
 
-function newFunction(){
-  
-}
+function bonusTime(salary, bonus) {
+  // your code here
+    return bonus ? `£${salary*10}` : `£${salary}`
+  }
