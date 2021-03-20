@@ -97,3 +97,7 @@ function convertToCelsius (temperature) {
   var celsius = (temperature - 32) * (5/9)
   return celsius
 }
+
+function newFunction(){
+  
+}
