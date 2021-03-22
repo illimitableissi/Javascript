@@ -102,3 +102,8 @@ function bonusTime(salary, bonus) {
   // your code here
     return bonus ? `£${salary*10}` : `£${salary}`
   }
+
+//Convert number to binary
+  function addBinary(a,b) {
+    return (a + b).toString(2)
+  }
