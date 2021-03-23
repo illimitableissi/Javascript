@@ -128,3 +128,27 @@ function bonusTime(salary, bonus) {
     return brackets
     }
 }
+
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+function fakeBin(x){
+  return x.split('').map(Number).map(i => i >= 5 ? i.toString().replace(i, 1) : i.toString().replace(i, 0)).join('')
+ }
+
+ function basicOp(operation, value1, value2)
+{ 
+  switch(operation) {
+    case '+' : 
+      return value1 + value2;
+    break;
+    case '-' : 
+      return value1 - value2;
+    break;
+    case '*' : 
+      return value1 * value2;
+    break;
+    case '/' : 
+      return value1 / value2;
+    break;
+    }
+}
