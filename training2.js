@@ -161,11 +161,9 @@ function litres(time) {
 
 // Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
 function moveZeros (arr) {
-  // TODO: Program me
-  let firstFilter = arr.filter(i => i !== 0);
-  let secondFilter = arr.filter(i => i === 0);
-  let zeroArray = '0'.repeat(secondFilter.length).split('').map(Number)
-  
-  return firstFilter.concat(zeroArray)
-  
+    // TODO: Program me
+    let firstFilter = arr.filter(i => i !== 0);
+    let secondFilter = arr.filter(i => i === 0);
+    
+    return firstFilter.concat(secondFilter)
 }
