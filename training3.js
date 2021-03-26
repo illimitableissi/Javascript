@@ -25,3 +25,38 @@ function high(x){
     let sumString = newArray.map(i => i.split('').map(j => alphabet.indexOf(j)).reduce((a,b) => a+b))
     let index = sumString.findIndex(z => z === Math.max(...sumString))
     return newArray[index]
+}
+
+// write the function isAnagram
+function isAnagram (test, original) {
+   
+    function splitter (str) {
+      return str.toLowerCase().split('').sort().join('')
+    }
+    return splitter(test) === splitter(original)
+  };
+
+  function DNAtoRNA(dna) {
+    // create a function which returns an RNA sequence from the given DNA sequence
+    return dna.split('').map(i => i.replace('T', 'U')).join('')
+  }
+
+//   A Narcissistic Number is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base
+//   Your code must return true or false depending upon whether the given number is a Narcissistic number
+
+  function narcissistic(value) {
+    // Code me to return true or false
+    let numArray = String(value).split('').map(Number)
+    let sum = numArray.map(i => Math.pow(i, numArray.length)).reduce((a,b) => a+b)
+    return sum === value
+  }
+
+  function typeValidation(variable, type) {
+    // Your code should be here ;) 
+    return typeof(variable) === type
+  }
+
+
+  function disemvowel(str) {
+    return str.split('').filter(i => i.match(/[^aAeEiIoOuU]/g)).join('')
+  }
