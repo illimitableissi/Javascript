@@ -60,3 +60,52 @@ function isAnagram (test, original) {
   function disemvowel(str) {
     return str.split('').filter(i => i.match(/[^aAeEiIoOuU]/g)).join('')
   }
+
+//   Complete the function that returns an array of length n, starting with the given number x and the squares of the previous number. If n is negative or zero, return an empty array/list.
+
+  function squares(x, n) {
+    if (n <= 0){
+      return []
+    } else {
+    let array = [x]
+    let power = x
+    while (array.length < n) {
+      power = Math.pow(power, 2)
+      array.push(power)
+    }
+    return array
+     }
+  }
+
+  const number = (busStops) => {
+    // Good Luck!
+    return busStops.map(i => i.reduce((a,b) => a - b)).reduce((c,d) => c + d)
+  }
+
+//   Take an integer n (n >= 0) and a digit d (0 <= d <= 9) as an integer. Square all numbers k (0 <= k <= n) between 0 and n. Count the numbers of digits d
+
+  function nbDig(n, d) {
+    // your code
+  let array = [...Array(n+1).keys()].map(i => i*i)
+  let stringArray = array.join('').split('')
+  
+  return stringArray.filter(k => k == d).length
+
+}
+
+// Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
+
+// Rules for a smiling face:
+
+// Each smiley face must contain a valid pair of eyes. Eyes can be marked as : or ;
+// A smiley face can have a nose but it does not have to. Valid characters for a nose are - or ~
+// Every smiling face must have a smiling mouth that should be marked with either ) or D
+// No additional characters are allowed except for those mentioned.
+
+// Valid smiley face examples: :) :D ;-D :~)
+// Invalid smiley faces: ;( :> :} :]
+
+
+function countSmileys(arr) {
+    return arr.filter(x => /^[:;][-~]?[)D]$/.test(x)).length;
+  }
