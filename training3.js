@@ -109,3 +109,66 @@ function isAnagram (test, original) {
 function countSmileys(arr) {
     return arr.filter(x => /^[:;][-~]?[)D]$/.test(x)).length;
   }
+
+//   Digital root is the recursive sum of all the digits in a number.
+
+//   Given n, take the sum of the digits of n. 
+//   If that value has more than one digit, continue reducing in this way until a single-digit number is produced. 
+//   The input will be a non-negative integer.
+
+function digital_root(n) {
+  
+    function splitAdd (num) {
+      return String(num).split('').map(Number).reduce((a,b) => a+b)
+    }
+    
+    if (splitAdd(n) <= 10){
+      return splitAdd(n)
+    }
+    
+    while(splitAdd(n) >= 10) {
+        n = splitAdd(n)
+        if (splitAdd(n) < 10){
+          return splitAdd(n)
+           break;
+        }
+      }
+   }
+
+//    You will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
+
+
+   function sortArray(array) {
+    const odd = array.filter((x) => x % 2).sort((a,b) => a - b);
+    return array.map((x) => x % 2 ? odd.shift() : x);
+  }
+
+// Given an array of integers, remove the smallest value. Do not mutate the original array/list. 
+// If there are multiple elements with the same value, remove the one with a lower index. I
+// f you get an empty array/list, return an empty array/list.
+
+  function removeSmallest(numbers) {
+    let min = Math.min(...numbers)
+    numbers.splice(numbers.indexOf(min), 1, 0)
+    return numbers.filter(i => i!== 0)
+  }
+
+//   Given: an array containing hashes of names
+
+//   Return: a string formatted as a list of names separated by commas except for the last two names, which should be separated by an ampersand.
+
+  function list(names){
+    //your code here
+    let array = []
+    for (var i = 0; i < names.length; i++){
+      array.push(names[i].name)
+    }
+    if (array.length <= 1){
+         return String(array)
+      } else if (array.length == 2) {
+       return array.join(' & ')
+      } else {
+        let popped = array.pop();
+        return `${array.join(', ')} & ${popped}`
+      }
+  }
