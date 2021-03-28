@@ -172,3 +172,12 @@ function digital_root(n) {
         return `${array.join(', ')} & ${popped}`
       }
   }
+//   Given a string, turn each character into its ASCII character code and join them together to create a number
+
+  function calc(x){
+    let string = x.split('').map(i => x.indexOf(i)).map(j => x.charCodeAt(j)).join('')
+    let totalOne = string.split('').map(Number).reduce((a,b) => a+b)
+    let totalTwo = string.split('').map(k => k.replace('7','1')).map(Number).reduce((c,d) => c +d)
+    
+    return totalOne - totalTwo
+   }
