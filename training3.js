@@ -181,3 +181,10 @@ function digital_root(n) {
     
     return totalOne - totalTwo
    }
+
+   function printerError(s) {
+    // your code
+    let regex = /[^abcdefghijklm]/g
+    let match = s.match(regex)
+    return !match ? `0/${s.length}` : `${match.length}/${s.length}`
+}
