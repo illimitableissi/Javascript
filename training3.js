@@ -188,3 +188,26 @@ function digital_root(n) {
     let match = s.match(regex)
     return !match ? `0/${s.length}` : `${match.length}/${s.length}`
 }
+
+function validBraces(braces){
+    let re = /\(\)|\{\}|\[\]/;
+    return re.test(braces) ? validBraces(braces.replace(re, '')) : '' === braces;
+  }
+
+  var uniqueInOrder=function(iterable){
+    return [...iterable].filter((a, i) => a !== iterable[i-1])
+}
+
+// You are given an odd-length array of integers, in which all of them are the same, except for one single number.
+
+// Complete the method which accepts such an array, and returns that single different number.
+
+const stray = nums => nums.reduce((a, b) => a ^ b);
+
+//Rock, paper, scissors
+const rps = (p1, p2) => {
+    return p1 == p2 ? 'Draw!' :
+           p1 == 'scissors' && p2 == 'paper' ? 'Player 1 won!' : 
+           p1 == 'paper' && p2 == 'rock' ? 'Player 1 won!' :  
+           p1 == 'rock' && p2 == 'scissors' ? 'Player 1 won!' : 'Player 2 won!'
+};
