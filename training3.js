@@ -211,3 +211,13 @@ const rps = (p1, p2) => {
            p1 == 'paper' && p2 == 'rock' ? 'Player 1 won!' :  
            p1 == 'rock' && p2 == 'scissors' ? 'Player 1 won!' : 'Player 2 won!'
 };
+
+// Given a list of integers, determine whether the sum of its elements is odd or even.
+
+function oddOrEven(array) {
+    //enter code here
+   if (!array || array.length == 0) {
+     return 'even'
+   }
+   return array.reduce((a,b) => a+b) %2 === 0 ? 'even' : 'odd'
+  }
