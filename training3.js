@@ -222,6 +222,9 @@ function oddOrEven(array) {
    return array.reduce((a,b) => a+b) %2 === 0 ? 'even' : 'odd'
   }
 
-const test = () => {
-    //test function commit
-}
+//   Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+  function doubleChar(str) {
+    // Your code here
+    return str.split('').map(i => i.repeat(2)).join('')
+  }
