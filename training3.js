@@ -194,6 +194,8 @@ function validBraces(braces){
     return re.test(braces) ? validBraces(braces.replace(re, '')) : '' === braces;
   }
 
+//Removes duplicate values in an array
+
   var uniqueInOrder=function(iterable){
     return [...iterable].filter((a, i) => a !== iterable[i-1])
 }
@@ -227,4 +229,32 @@ function oddOrEven(array) {
   function doubleChar(str) {
     // Your code here
     return str.split('').map(i => i.repeat(2)).join('')
+  }
+
+//   check if an integer number is divisible by each out of two arguments.
+  function isDivideBy(number, a, b) {
+    // good luck
+    return number % a == 0 && number % b == 0
+  }
+
+  var countSheep = function (num){
+    //your code here
+    let array = [...Array(num+1).keys()]
+    array.shift()
+    return array.map(i => `${i} sheep...`).join('')
+  }
+
+//   Given a list lst and a number N, create a new list that contains each number of lst at most N times without reordering. 
+// For example if N = 2, and the input is [1,2,3,1,2,1,2,3], you take [1,2,3,1,2], drop the next [1,2] since this would lead to 1 and 2 being in the result 3 times, and then take 3, which leads to [1,2,3,1,2,3].
+  function deleteNth(arr, x) {
+    var res = []
+    var map = {}
+    
+    for (var i = 0; i < arr.length; i++) {
+      var n = arr[i]
+      var c = map[n] = (map[n] || 0) + 1
+      if (c <= x) res.push(n)
+    }
+    
+    return res
   }
