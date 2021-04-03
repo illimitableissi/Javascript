@@ -167,3 +167,12 @@ function moveZeros (arr) {
     
     return firstFilter.concat(secondFilter)
 }
+
+//Find the quarter from the month given
+
+const quarterOf = (month) => {
+  // Your code here
+ return month > 9 ? 4 :
+        month > 6 ? 3 :
+        month > 3 ? 2 : 1 
+}
