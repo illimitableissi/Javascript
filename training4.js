@@ -17,3 +17,9 @@ function sumArray(array) {
  }
   
 }
+
+//square numebrs and add array
+
+function squareSum(numbers){
+    return !numbers || numbers.length === 0 ? 0 : numbers.map(i => i*i).reduce((a,b) => a + b)
+  }
