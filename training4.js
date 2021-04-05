@@ -23,3 +23,12 @@ function sumArray(array) {
 function squareSum(numbers){
     return !numbers || numbers.length === 0 ? 0 : numbers.map(i => i*i).reduce((a,b) => a + b)
   }
+
+//   The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+
+  function count (string) {  
+    var count = {};  
+    string.split('').forEach(s => count[s] ? count[s]++ : count[s] = 1);
+    
+    return count;
+  }
