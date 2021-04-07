@@ -29,6 +29,13 @@ function squareSum(numbers){
   function count (string) {  
     var count = {};  
     string.split('').forEach(s => count[s] ? count[s]++ : count[s] = 1);
-    
+
     return count;
+  }
+
+//   Given a number n, return the number of positive odd numbers below n
+  function oddCount(n){
+    // your code here
+  
+    return [...Array(n).keys()].filter(i => i%2 !==0).length
   }
