@@ -39,3 +39,5 @@ function squareSum(numbers){
   
     return [...Array(n).keys()].filter(i => i%2 !==0).length
   }
+
+  //minor edit
