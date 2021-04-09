@@ -40,4 +40,11 @@ function squareSum(numbers){
     return [...Array(n).keys()].filter(i => i%2 !==0).length
   }
 
-  //minor edit
+  //You receive an array with your peers' test scores. Now calculate the average and compare your score!
+
+// Return True if you're better, else False!
+
+  function betterThanAverage(classPoints, yourPoints) {
+    // Your code here
+    return classPoints.reduce((a,b) => a + b)/classPoints.length < yourPoints ? true : false
+  }
