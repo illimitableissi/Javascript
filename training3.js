@@ -1,7 +1,6 @@
 // Given a year, return the century it is in.
 
 function century(year) {
-    // Finish this :)
     return Math.ceil(year/100)
   }
 
@@ -52,7 +51,6 @@ function isAnagram (test, original) {
   }
 
   function typeValidation(variable, type) {
-    // Your code should be here ;) 
     return typeof(variable) === type
   }
 
@@ -78,14 +76,12 @@ function isAnagram (test, original) {
   }
 
   const number = (busStops) => {
-    // Good Luck!
     return busStops.map(i => i.reduce((a,b) => a - b)).reduce((c,d) => c + d)
   }
 
 //   Take an integer n (n >= 0) and a digit d (0 <= d <= 9) as an integer. Square all numbers k (0 <= k <= n) between 0 and n. Count the numbers of digits d
 
   function nbDig(n, d) {
-    // your code
   let array = [...Array(n+1).keys()].map(i => i*i)
   let stringArray = array.join('').split('')
   
@@ -158,7 +154,6 @@ function digital_root(n) {
 //   Return: a string formatted as a list of names separated by commas except for the last two names, which should be separated by an ampersand.
 
   function list(names){
-    //your code here
     let array = []
     for (var i = 0; i < names.length; i++){
       array.push(names[i].name)
@@ -183,7 +178,6 @@ function digital_root(n) {
    }
 
    function printerError(s) {
-    // your code
     let regex = /[^abcdefghijklm]/g
     let match = s.match(regex)
     return !match ? `0/${s.length}` : `${match.length}/${s.length}`
@@ -227,18 +221,15 @@ function oddOrEven(array) {
 //   Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
 
   function doubleChar(str) {
-    // Your code here
     return str.split('').map(i => i.repeat(2)).join('')
   }
 
 //   check if an integer number is divisible by each out of two arguments.
   function isDivideBy(number, a, b) {
-    // good luck
     return number % a == 0 && number % b == 0
   }
 
   var countSheep = function (num){
-    //your code here
     let array = [...Array(num+1).keys()]
     array.shift()
     return array.map(i => `${i} sheep...`).join('')

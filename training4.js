@@ -35,7 +35,6 @@ function squareSum(numbers){
 
 //   Given a number n, return the number of positive odd numbers below n
   function oddCount(n){
-    // your code here
   
     return [...Array(n).keys()].filter(i => i%2 !==0).length
   }
@@ -45,6 +44,11 @@ function squareSum(numbers){
 // Return True if you're better, else False!
 
   function betterThanAverage(classPoints, yourPoints) {
-    // Your code here
     return classPoints.reduce((a,b) => a + b)/classPoints.length < yourPoints ? true : false
+  }
+
+//   Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
+
+  function lovefunc(flower1, flower2){
+    return flower1%2 == 0 && flower2%2 !== 0 || flower1%2 !==0 && flower2%2 == 0 
   }

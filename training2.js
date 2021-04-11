@@ -1,7 +1,6 @@
 // There is an array with some numbers. All numbers are equal except for one. Try to find it!
 
 function findUniq(arr) {
-    // do magic
     let sorted = arr.sort((a,b) => b-a)
     
     if(sorted[0] == sorted[1]) {
@@ -29,7 +28,6 @@ function repeatStr (n, s) {
 }
 
 function find_average(array) {
-  // your code here
   return array.reduce((a,b) => a + b)/array.length;
 }
 
@@ -52,7 +50,6 @@ function countSmileys(arr) {
 // Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 
 function solution(str, ending){
-  // TODO: complete
   let sub = str.substring(str.length - ending.length)
   return sub === ending ? true : false
 
@@ -78,7 +75,6 @@ function getAverage(marks){
 
 //  Convert number to reversed array of digits
  function digitize(n) {
-  //code here
   let array = String(n).split('').reverse()
   return array.map(i => Number(i))
 }
@@ -99,7 +95,6 @@ function convertToCelsius (temperature) {
 }
 
 function bonusTime(salary, bonus) {
-  // your code here
     return bonus ? `£${salary*10}` : `£${salary}`
   }
 
@@ -161,7 +156,6 @@ function litres(time) {
 
 // Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
 function moveZeros (arr) {
-    // TODO: Program me
     let firstFilter = arr.filter(i => i !== 0);
     let secondFilter = arr.filter(i => i === 0);
     
@@ -171,7 +165,6 @@ function moveZeros (arr) {
 //Find the quarter from the month given
 
 const quarterOf = (month) => {
-  // Your code here
  return month > 9 ? 4 :
         month > 6 ? 3 :
         month > 3 ? 2 : 1 
