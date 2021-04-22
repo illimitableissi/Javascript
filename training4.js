@@ -53,4 +53,10 @@ function squareSum(numbers){
     return flower1%2 == 0 && flower2%2 !== 0 || flower1%2 !==0 && flower2%2 == 0 
   }
 
-  //minor edit
+//   Return the number (count) of vowels in the given string.
+
+  function getCount(str) {
+    const regex = /[aeiou]/g
+    
+    return str.match(regex) == null ? 0 : str.match(regex).length
+  }
