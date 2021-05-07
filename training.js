@@ -71,8 +71,7 @@ function pigIt(str){
 function spinWords(str){
     //TODO Have fun :)
     return str.split(' ').map(i => i.length >= 5 ? i.split("").reverse().join('') : i).join(' ')
-    
-  }
+}
   
 //   A pangram is a sentence that contains every single letter of the alphabet at least once.
 
@@ -81,7 +80,7 @@ function isPangram(string){
       var alphabets = 'abcdefghijklmnopqrstuvwxyz'.split("");
       var string = string.toLowerCase();
       return alphabets.every(x => string.includes(x));
-  }
+}
 
 function longestConsec(strarr, k) {
   if( strarr.length==0 || k> strarr.length || k <1 ) return "";

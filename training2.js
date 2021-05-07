@@ -14,14 +14,6 @@ function findUniq(arr) {
     return String(x.split('').map(i => i.trim()).join(''))
 }
 
-function digital_root(n) {
-  
-  function splitAdd (num) {
-    return num
-  }
-  // ...
-  splitAdd(n)
-}
 
 function repeatStr (n, s) {
   return s.repeat(n);
