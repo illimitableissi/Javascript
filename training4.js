@@ -74,3 +74,10 @@ function number2words(n){
   if (n < 1000) return num[Math.floor(n/100)] +" hundred" + (n%100 == 0 ? "" : " " + number2words(n%100));
   return number2words(Math.floor(n/1000)) + " thousand" + (n%1000 != 0 ? " " +number2words(n%1000) : "");
 }
+
+// Essentially, rearrange the digits to create the highest possible number.
+
+function descendingOrder(n){
+  return Number(String(n).split('').sort((a,b) => b - a).join(''))
+  //...
+}
